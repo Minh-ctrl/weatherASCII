@@ -1,8 +1,6 @@
 <script lang="ts">
     import objASCII from "$lib/weatherConstant";
     import type {WeatherData} from "src/global";
-    import { createEventDispatcher } from 'svelte';
-    const dispatch= createEventDispatcher();
     let location;
     let ASCIIicon;
     let fetched;
@@ -12,37 +10,53 @@
         let weathercode= res.current_condition[0].weatherCode;
         ASCIIicon=objASCII[weathercode]
         fetched= res;
-        console.log(fetched);
         return res;
     }
     let promise= fetchWeatherData();
-    function dispatcher(){
-        dispatch('')
+    function handleKeydown(event){  
+        if (event.code=='Enter'){
+            event.preventDefault()
+            event.target.location 
+            location=event.target.value
+            fetchWeatherData();
+            console.log(promise);
+        }
     }
 </script>
-
-<pre class="text-gray-200 flex flex-row leading-tight">
+<main class="w-full">
+<div class="scanline flex flex-row justify-center">
+<pre class="flex flex-row leading-tightjustify-center justify-items-center">
 {#await promise}
-    <input type="text" bind:value={location}>
+    Fetching Data
     {:then weatherData}
-    <div class="container flex flex-col w-1/12">
-    {#each ASCIIicon.weatherSymbol as weatherSymbol}
-        <span class="symbol">{weatherSymbol}</span>
-    {/each} 
+    <div class="container flex flex-row w-full justify-center">
+        <div class="container flex flex-col w-full">
+            {#each ASCIIicon.weatherSymbol as weatherSymbol}
+                <span class="symbol text-2xl w-full">{weatherSymbol}</span>
+            {/each} 
+
+        </div>
+        <div class="container text-xl flex flex-col ">
+            <p>{fetched.current_condition[0].weatherDesc[0].value}</p>
+            <p>{fetched.current_condition[0].FeelsLikeC}°C</p>
+        </div>
     </div>
-    <div class="container flex flex-col">
-    <p>Weather report: {location.toLocaleUpperCase()}</p>
-    <p>{fetched.current_condition[0].weatherDesc[0].value}</p>
-    <pre class="container flex flex-row">
-        <p>{fetched.current_condition[0].FeelsLikeC}</p>
-        <p>°C</p>
-    </pre>
-</div>
 {/await}
 </pre>
-
+</div>
+    <div class="input__field flex flex-row justify-center">
+        <input type="text" on:keyup|preventDefault={handleKeydown}>
+    </div>
+</main>
 <style>
- .symbol{
+    .symbol{
     letter-spacing: -0.05em;
- }
+    }
+    :root{
+        --text-color: #00aa00;
+    }
+    pre{
+        color: var(--text-color);
+    }
+
 </style>
