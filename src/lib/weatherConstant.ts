@@ -1,4 +1,3 @@
-
 let ASCCII = {
     "Unknown":[
             "    .-.      ",
