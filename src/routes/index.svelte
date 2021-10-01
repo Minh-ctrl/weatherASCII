@@ -13,7 +13,7 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
     main{
-        background-color: #333;
+        background-color: black;
         font-family: VT323;
         text-transform: uppercase;
     }
@@ -21,7 +21,6 @@
     background: linear-gradient(#101010 50%, rgba(16, 16, 16, 0.2) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.03));
 	background-size: 100% 3px, 6px 100%;
 	content: "";
-	display: block;
 	pointer-events: none;
 	position: fixed;
 		top: 0;
@@ -31,10 +30,9 @@
 	z-index: 2;
     }
     .crt::after {
-        animation: flicker 1s infinite;
+        animation: flicker 0 infinite;
 	    background: rgba(16, 16, 16, 0.2);
 	    content: "";
-	    display: block;
 	    pointer-events: none;
 	    position: fixed;
 		top: 0;
@@ -46,7 +44,7 @@
     .crt{
         animation: textShadow 1s infinite;
     }
-    @keyframes textShadow {
+    /* @keyframes textShadow {
     0% {
         text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
     }
@@ -133,8 +131,8 @@
 		90% { opacity: 0.24467 }
 		95% { opacity: 0.08351 }
 		100% { opacity: 0.54813 }
-}
-.scanline {
+} */
+/* .scanline {
 	animation: scroll 10s 5s infinite;
 	background: -moz-linear-gradient(top,  rgba(0,221,0,0) 0%, rgba(0,221,0,1) 50%, rgba(0,221,0,0) 100%);
 	background: -webkit-linear-gradient(top,  rgba(0,221,0,0) 0%,rgba(0,221,0,1) 50%,rgba(0,221,0,0) 100%);
@@ -147,5 +145,5 @@
 		right: 0;
 		top: -5%;
 	z-index: 2;
-}
+} */
 </style>
