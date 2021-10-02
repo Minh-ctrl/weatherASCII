@@ -29,27 +29,26 @@
 <main class="w-full flex flex-col justify-center">
     <div class="container flex flex-col flex-nowrap justify-center w-full">
         {#each arr as line}
-        <div class="history text-white bg-yellow-900 text-2xl w-full">> {line}</div>
+        <div class="history text-white bg-black text-7xl w-full">> {line}</div>
         {/each}
     </div>
-    <div class="input__field flex flex-row justify-center w-full text-2xl">
-        <input bind:value={newline}  contenteditable="true" class=" w-full inline outline-none visible" type="text" on:keyup|preventDefault={handleKeydown} 
-        on:input={()=>{console.log(newline)}}>
+    <div class="input__field flex flex-row justify-center w-full  text-7xl">
+        <input bind:value={newline}  contenteditable="true" class="bg-black w-full inline outline-none visible" type="text" on:keyup|preventDefault={handleKeydown} >
     </div>
 
 <div class="scanline flex flex-row justify-center">
     <pre class="flex flex-row leading-tightjustify-center justify-items-center">
     {#await promise}
-        Fetching Data
+    <div class="history text-white  text-7xl w-full"> FETCHING DATA</div>
         {:then weatherData}
         <div class="container flex flex-row w-full justify-center">
             <div class="container flex flex-col w-full">
                 {#each ASCIIicon.weatherSymbol as weatherSymbol}
-                    <span class="symbol text-2xl w-full">{weatherSymbol}</span>
+                    <span class="symbol text-7xl w-full">{weatherSymbol}</span>
                 {/each} 
 
             </div>
-            <div class="container text-2xl flex flex-col ">
+            <div class="container text-7xl flex flex-col">
                 <p>{fetched.current_condition[0].weatherDesc[0].value}</p>
                 <p>{fetched.current_condition[0].FeelsLikeC}°C</p>
             </div>

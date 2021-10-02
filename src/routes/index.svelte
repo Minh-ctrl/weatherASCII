@@ -44,7 +44,7 @@
     .crt{
         animation: textShadow 1s infinite;
     }
-    /* @keyframes textShadow {
+    @keyframes textShadow {
     0% {
         text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
     }
@@ -131,8 +131,8 @@
 		90% { opacity: 0.24467 }
 		95% { opacity: 0.08351 }
 		100% { opacity: 0.54813 }
-} */
-/* .scanline {
+}
+.scanline {
 	animation: scroll 10s 5s infinite;
 	background: -moz-linear-gradient(top,  rgba(0,221,0,0) 0%, rgba(0,221,0,1) 50%, rgba(0,221,0,0) 100%);
 	background: -webkit-linear-gradient(top,  rgba(0,221,0,0) 0%,rgba(0,221,0,1) 50%,rgba(0,221,0,0) 100%);
@@ -145,5 +145,5 @@
 		right: 0;
 		top: -5%;
 	z-index: 2;
-} */
+}
 </style>
