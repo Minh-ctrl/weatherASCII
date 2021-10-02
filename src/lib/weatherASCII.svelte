@@ -5,7 +5,7 @@
     let ASCIIicon;
     let fetched;
     async function fetchWeatherData(){
-        const req= await fetch (`http://wttr.in/${newline}?format=j1`);
+        const req= await fetch (`https://wttr.in/${newline}?format=j1`);
         const res= (await req.json()) as WeatherData;
         let weathercode= res.current_condition[0].weatherCode;
         ASCIIicon=objASCII[weathercode]
