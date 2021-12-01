@@ -1,4 +1,4 @@
-let ASCCII = {
+const ASCCII = {
     "Unknown":[
             "    .-.      ",
             "     __)     ",
@@ -114,7 +114,7 @@ let ASCCII = {
             "  _ - _ - _ -  ",
             "             "],
         }
-let codes = {
+const codes = {
             "113": "Sunny",
             "116": "PartlyCloudy",
             "119": "Cloudy",
