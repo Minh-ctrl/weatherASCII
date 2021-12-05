@@ -1,19 +1,14 @@
 
 <script>
     import WeatherAscii from "$lib/weatherASCII.svelte";
-
 </script>
-<main class="crt w-full h-screen ">
-<div class="scanline"></div>
+<main class="crt w-full h-full ">
 <WeatherAscii></WeatherAscii>
-
-
 </main>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
     main{
-        background-color: black;
         font-family: VT323;
         text-transform: uppercase;
     }
