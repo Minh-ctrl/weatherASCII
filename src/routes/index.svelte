@@ -2,7 +2,7 @@
 <script>
     import WeatherAscii from "$lib/weatherASCII.svelte";
 </script>
-<main class="crt w-full h-full ">
+<main class="crt w-full h-full">
 <WeatherAscii></WeatherAscii>
 </main>
 
@@ -127,18 +127,5 @@
 		95% { opacity: 0.08351 }
 		100% { opacity: 0.54813 }
 }
-.scanline {
-	animation: scroll 10s 5s infinite;
-	background: -moz-linear-gradient(top,  rgba(0,221,0,0) 0%, rgba(0,221,0,1) 50%, rgba(0,221,0,0) 100%);
-	background: -webkit-linear-gradient(top,  rgba(0,221,0,0) 0%,rgba(0,221,0,1) 50%,rgba(0,221,0,0) 100%);
-	background: linear-gradient(to bottom,  rgba(0,221,0,0) 0%,rgba(0,221,0,1) 50%,rgba(0,221,0,0) 100%);
-	display: block;
-	height: 20px;
-	opacity: 0.05;
-	position: absolute;
-		left: 0;
-		right: 0;
-		top: -5%;
-	z-index: 2;
-}
+
 </style>
