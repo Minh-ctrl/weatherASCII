@@ -8,4 +8,4 @@ For the API I used https://wttr.in and repurposed it's internal ASCII library ar
 
 ## Usage
 Simply go to https://weather-ascii.vercel.app and type in desired location to get it's current weather information.
-![image](https://user-images.githubusercontent.com/80884591/144376541-97586cc8-6562-4de1-9983-b0165a1b8cb8.png)
+![image](https://user-images.githubusercontent.com/80884591/145132822-116782da-fac0-43a5-8c88-71e327af63f8.png)
