@@ -3,7 +3,7 @@
     import WeatherAscii from "$lib/weatherASCII.svelte";
 </script>
 <main class="crt w-full h-full">
-<WeatherAscii></WeatherAscii>
+<WeatherAscii/>
 </main>
 
 <style>

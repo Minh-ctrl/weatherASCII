@@ -1,4 +1,4 @@
-const ASCCII = {
+const ASCII = {
     "Unknown":[
             "    .-.      ",
             "     __)     ",
@@ -166,11 +166,11 @@ const codes = {
         }
 let objASCII={};
 let parsed = Object.keys(codes).map((code)=>{
-    let codeName = codes[code];
-    if(ASCCII.hasOwnProperty(codeName)){
+    let weatherDesc = codes[code];
+    if(ASCII.hasOwnProperty(weatherDesc)){
         objASCII[code]= {
-            climateCode: codeName,
-            weatherSymbol:ASCCII[codeName]
+            climateCode: weatherDesc,
+            weatherSymbol:ASCII[weatherDesc]
             }
          }
 });

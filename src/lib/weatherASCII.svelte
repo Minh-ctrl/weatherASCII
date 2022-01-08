@@ -1,7 +1,6 @@
 <script lang="ts">
     import objASCII from "$lib/weatherConstant";
     import type {WeatherData} from "src/global";
-    let ASCIIicon, ASCIIicon1, ASCIIicon2, displayedASCII;
     let weathercode, weathercode1 ,weathercode2;
     let fetched;
     let arr=[];
@@ -29,7 +28,6 @@
             }];
             console.log(arr);
             newline='>';
-
         }
     }
 </script>
@@ -46,6 +44,7 @@
                                 {/each} 
                             </div>
                             <div class="container text-xl flex flex-col">
+                                <p>Country: {query.fetched.nearest_area[0].country[0].value}</p>
                                 <p>{query.fetched.current_condition[0].localObsDateTime}</p>
                                 <p>{query.fetched.current_condition[0].weatherDesc[0].value}</p>
                                 <p>{query.fetched.current_condition[0].FeelsLikeC}°C</p>
