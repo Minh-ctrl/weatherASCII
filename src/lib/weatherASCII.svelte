@@ -1,17 +1,16 @@
 <script lang="ts">
     import objASCII from "$lib/weatherConstant";
     import type {WeatherData} from "src/global";
-    let weathercode, weathercode1 ,weathercode2;
+    let weatherCode, weatherCode1 ,weatherCode2;
     let fetched;
     let arr=[];
     let newline='>'; 
     async function fetchWeatherData(){
         const req = await fetch (`https://wttr.in/${newline}?format=j1`);
         const res = (await req.json()) as WeatherData;
-        weathercode = res.current_condition[0].weatherCode;
-        weathercode1 = res.weather[1].hourly[5].weatherCode;
-        weathercode2 = res.weather[2].hourly[5].weatherCode;
- 
+        weatherCode = res.current_condition[0].weatherCode;
+        weatherCode1 = res.weather[1].hourly[5].weatherCode;
+        weatherCode2 = res.weather[2].hourly[5].weatherCode;
         fetched= res;
         return res;
     }
@@ -22,11 +21,10 @@
             arr= [...arr, {
                 text: newline, 
                 fetched,  
-                ASCIIicon: objASCII[weathercode],
-                ASCIIicon1: objASCII[weathercode1],
-                ASCIIicon2: objASCII[weathercode2]
+                ASCIIicon: objASCII[weatherCode],
+                ASCIIicon1: objASCII[weatherCode1],
+                ASCIIicon2: objASCII[weatherCode2]
             }];
-            console.log(arr);
             newline='>';
         }
     }
