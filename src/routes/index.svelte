@@ -31,7 +31,7 @@
         z-index: 2;
     }
     .crt::after {
-        animation: flicker 0 infinite;
+        animation: flicker 2s infinite;
         background: rgba(16, 16, 16, 0.2);
         content: "";
         pointer-events: none;
