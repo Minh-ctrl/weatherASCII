@@ -3,7 +3,7 @@ weatherASCII is web application that output weather information based on user's 
 
 
 ## Tech Stack
-I used Svelte framework as well as TailwindCSS for the Front End and Typescript for the backend of the application.
+I used Svelte framework, Typescript as well as TailwindCSS for the Front End   of the application.
 For the API I used https://wttr.in and repurposed it's internal ASCII library art.
 
 ## Usage
